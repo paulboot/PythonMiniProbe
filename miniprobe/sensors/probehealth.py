@@ -248,7 +248,7 @@ class Probehealth(object):
                 lines = temp.readlines()
                 temp.close()
                 temp_float = float(lines[0]) / 1000.0
-                if temp_float > config['maxtemp']:
+                if temp_float > float(config['maxtemp']):
                     health -= 25
                     logging.debug("Current Health: %s percent" % health)
             else:

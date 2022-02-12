@@ -1,5 +1,5 @@
 default_sensors = "Ping,HTTP,Port,SNMPCustom,CPULoad,Memory,Diskspace,SNMPTraffic,CPUTemp,Probehealth,ExternalIP,ADNS,APT,NMAP,MDADM"
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Copyright (c) 2014, Paessler AG <support@paessler.com>
 # All rights reserved.
 # Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
@@ -27,10 +27,7 @@ import uuid
 from setuptools import setup, find_packages
 from setuptools.command.install import install as _install
 
-# Input fix for python2/3 compatibility
-if sys.version_info > (3, 0):
-    raw_input = input
-
+raw_input = input
 
 def read(path):
     with open(path, 'r') as file:
@@ -455,10 +452,7 @@ class Configure(_install):
             print("%s. Exiting!" % e)
             return False
 
-if sys.version > (3, 0):
-    py_requires = 'requirements3.txt'
-else:
-    py_requires = 'requirements.txt'
+py_requires = 'requirements3.txt'
 with open(py_requires) as f:
     requires = f.read().splitlines()
 

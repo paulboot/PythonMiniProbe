@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Copyright (c) 2014, Paessler AG <support@paessler.com>
 # All rights reserved.
 # Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
